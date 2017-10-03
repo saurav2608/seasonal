@@ -21,7 +21,7 @@ prod_ts <- ts(iip$`NIC 32`,
                    frequency = 12)
 g <- ggplot(iip) +
   geom_line(aes(y = `NIC 32`, x = date)) +
-  ggtitle("IIP Date - White Goods Production Index") +
+  ggtitle("IIP Data - White Goods Production Index") +
   ylab("White Good Prod Index")
 ggsave("output/ts.png", g, device = "png")
 
@@ -47,8 +47,8 @@ g1 <- ggplot(output_df, aes(x = date)) +
   geom_line(aes(y = orig, color = "blue")) +
   geom_line(aes(y = final, color = "red")) +
   geom_line(aes(y = trend, color = "gray"), linetype = 2) +
-  ggtitle("Original and Seasonally Adjusted Series - White Goods") +
+  ggtitle("Original and Seasonally Adjusted Series") +
   theme(legend.position = "none") +
-  ylab("Series Values")
+  ylab("White Goods Index")
 g1  
 ggsave("output/ts1.png", g1, device = "png")
